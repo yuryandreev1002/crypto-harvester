@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    driver-class-name: 'org.postgresql.Driver'
+    url: 'jdbc:postgresql://localhost:5434/crypto-harvester-db'
+    username: 'ch-admin'
+    password: 'cgRtY6$!23'
+  mvc:
+    dispatch-options-request: true
+  jpa:
+    database-platform: 'org.hibernate.dialect.PostgreSQLDialect'
+    hibernate:
+      ddl-auto: 'update'
+
+server:
+  port: 8070
+
+flush:
+  period:
+    s: 30
+
+application:
+  instruments:
+    -
+      name: BTCUSD
+      instrument: BTC/USDT
+    -
+      name: ETHUSD
+      instrument: ETH/USDT
